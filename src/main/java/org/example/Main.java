@@ -12,10 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         Armazenamento armazenamento = new Banco();
-        // Arquivo arquivo = new Arquivo();
+        Arquivo arquivo = new Arquivo();
 
-        Concessionaria concessionaria = new Concessionaria(armazenamento);
-        // Concessionaria concessionaria = new Concessionaria(arquivo);
+        Concessionaria concessionaria = new Concessionaria(armazenamento); // Lugar onde está aplicado a injeção de dependência, trocando o parâmetro "armazenamento" por "arquivo", para utilizar o método de salvar por um arquivo.
 
         Carro carro = Main.criarCarro();
         concessionaria.salvarCarro(carro);
